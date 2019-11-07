@@ -25,6 +25,7 @@ optional arguments:
   -s POLL_SLEEP, --poll-sleep POLL_SLEEP 
           How often to check for ip updates
 ```
+If you do provide a path to your password file, it must be a file that contains nothing but your password.
 
  # Examples
  - python pyduc.py --username user --password-path /var/user/pw.txt --hostnames host1.noip.net, host2.noip.net --poll-sleep "5 minutes, 3 seconds, 1 hour"

@@ -33,3 +33,4 @@ optional arguments:
  
  - python pyduc.py --hostnames host.noip.net -u -s "10 minutes 17 seconds"
  
+ - python pyduc.py -u user -n host.noip.net -s 1min

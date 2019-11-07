@@ -10,16 +10,17 @@ A Python No-IP Dynamic Update Client
 ```
 usage: Pyduc 1.1 No-IP Dynamic Update Client 
   python pyduc.py [-h] [-u USERNAME] [-p PASSWORD_PATH] =-n HOSTNAMES [HOSTNAMES ...]] [-s POLL_SLEEP]                                                                                                                                                                                    
-
+  
+required arguments:
+  -u USERNAME, --username USERNAME                 
+          The username for your no-ip account
+  -n HOSTNAMES [HOSTNAMES ...], --hostnames HOSTNAMES [HOSTNAMES ...] 
+          The list of no-ip hostnames to update                      
 optional arguments:
   -h, --help                                       
           Show this help message and exit
-  -u USERNAME, --username USERNAME                 
-          The username for your no-ip account
   -p PASSWORD_PATH, --password-path PASSWORD_PATH  
-          The path to the file that holds your no-ip account password
-  -n HOSTNAMES [HOSTNAMES ...], --hostnames HOSTNAMES [HOSTNAMES ...] 
-          The list of no-ip hostnames to update                                                             
+          The path to the file that holds your no-ip account password                                       
   -s POLL_SLEEP, --poll-sleep POLL_SLEEP 
           How often to check for ip updates
 ```

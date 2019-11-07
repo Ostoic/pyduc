@@ -1,5 +1,5 @@
 # pyduc
-Python No-IP Dynamic Update Client
+A Python No-IP Dynamic Update Client
 
 # Requirements
 - Python 2.7

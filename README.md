@@ -8,8 +8,9 @@ A Python No-IP Dynamic Update Client
 
 # Usage
 ```
-usage: Pyduc 1.1 No-IP Dynamic Update Client 
-  python pyduc.py [-h] -u USERNAME -n HOSTNAMES [HOSTNAMES ...] [-p PASSWORD_PATH]  [-s POLL_SLEEP]                                                                                                                                                                                    
+Pyduc 1.1 No-IP Dynamic Update Client 
+usage:
+  python pyduc.py -u USERNAME -n HOSTNAMES [HOSTNAMES ...] [-h] [-p PASSWORD_PATH]  [-s POLL_SLEEP]                                                                                                                                                                                    
   
 required arguments:
   -u USERNAME, --username USERNAME                 

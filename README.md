@@ -37,3 +37,5 @@ If you do provide a path to your password file, it must be a file that contains 
  - python pyduc.py --hostnames host.noip.net -u -s "10 minutes 17 seconds"
  
  - python pyduc.py -u user -n host.noip.net -s 1min
+ 
+ ![pyduc-use-case](https://i.imgur.com/idWKHTY.png)

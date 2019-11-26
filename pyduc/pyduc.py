@@ -15,8 +15,8 @@ noip_error_messages = {
 			hostname
 		),
 		
-	'nochg': lambda response=None, duc=None, new_ip=None, hostname=None: 
-		'[noip-response] "{}": No change needed'.format(response.text.strip('\r\n ')),
+	'nochg': lambda hostname, response=None, duc=None, new_ip=None: 
+		'[noip-response] "{}": No change needed for "{}"'.format(response.text.strip('\r\n '), hostname),
 		
 	# In the event that our host does not exist
 	'nohost': lambda duc, hostname, response, new_ip=None:

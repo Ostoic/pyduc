@@ -46,7 +46,7 @@ __parser.add_argument(
 
 __parser.add_argument(
 	'-p',
-	'--pw-path', 
+	'--password-path', 
 	type = str,
 	default = './pw',
 	help = 'The path to the file that holds your no-ip account password'
@@ -69,6 +69,8 @@ __parser.add_argument(
 
 # Parse CLI arguments
 args = __parser.parse_args()
+
+args.pw_path = args.password_path
 
 # Handle CLI arguments
 if not args.hostnames:

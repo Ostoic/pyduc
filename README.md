@@ -4,7 +4,7 @@ A Python No-IP Dynamic Update Client
 Pyduc is for those who need a quick and easy-to-use dynamic update client for their no-ip hostnames. For non-Windows machines, the client No-IP provides requires one to be able to compile it for their target machine. In the situation that setting up a build environment for their device requires great effort (such as on a jailbreak iDevice), this script is a good solution.
 
 # Requirements
-- Python 2.7
+- Python >= 2.7
 - Python requests library
 - Openssl >= 0.9.8g
 

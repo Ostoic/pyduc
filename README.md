@@ -12,7 +12,7 @@ Pyduc is for those who need a quick and easy-to-use dynamic update client for th
 ```
 Pyduc 1.1 No-IP Dynamic Update Client 
 usage:
-  python pyduc.py -u USERNAME -n HOSTNAMES [HOSTNAMES ...] [-h] [-p PASSWORD_PATH]  [-s POLL_SLEEP]                                                                                                                                                                                    
+  python pyduc.py -u USERNAME -n HOSTNAMES [HOSTNAMES ...] [-h] [-p PASSWORD_PATH]  [-s POLL_SLEEP] [-v]
   
 required arguments:
   -u USERNAME, --username USERNAME                 
@@ -26,6 +26,8 @@ optional arguments:
           The path to the file that holds your no-ip account password                                       
   -s POLL_SLEEP, --poll-sleep POLL_SLEEP 
           How often to check for ip updates
+  -v, --verbose
+           Enable verbose logging
 ```
 If you do provide a path to your password file, it must be a file that contains nothing but your password.
 

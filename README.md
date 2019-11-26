@@ -27,7 +27,7 @@ optional arguments:
   -s POLL_SLEEP, --poll-sleep POLL_SLEEP 
           How often to check for ip updates
   -v, --verbose
-           Enable verbose logging
+          Enable verbose logging
 ```
 If you do provide a path to your password file, it must be a file that contains nothing but your password.
 

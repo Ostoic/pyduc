@@ -10,7 +10,7 @@ Pyduc is for those who need a quick and easy-to-use dynamic update client for th
 
 # Usage
 ```
-Pyduc 1.1 No-IP Dynamic Update Client 
+Pyduc 1.2 No-IP Dynamic Update Client 
 usage:
   python pyduc.py -u USERNAME -n HOSTNAMES [HOSTNAMES ...] [-h] [-p PASSWORD_PATH]  [-s POLL_SLEEP] [-v]
   

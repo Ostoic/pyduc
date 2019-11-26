@@ -40,4 +40,6 @@ If you do provide a path to your password file, it must be a file that contains 
  
  - python pyduc.py -u user -n host.noip.net -s 1min
  
- ![pyduc-use-case](https://i.imgur.com/idWKHTY.png)
+ ![pyduc-use-case](https://i.imgur.com/s2eocl0.png)
+ ![pyduc-error-case1](https://i.imgur.com/A1Fbnie.png)
+ ![pyduc-error-case2](https://i.imgur.com/qT5pPAy.png)

@@ -57,11 +57,20 @@ def error_code(response):
 	raise ValueError('No-ip error code for "{}" not found'.format(response))
 	
 def get_public_ip():
-	response = requests.get('https://api.ipify.org', timeout=10).text.strip('\r\n ')
-	if verbose:
-		print('[pyduc.get_public_ip] Response: "{}"'.format(response))
-		
-	return response
+	urls = ['https://icanhazip.com', 'https://api.ipify.org', 'http://icanhazip.com', 'http://api.ipify.org']
+	
+	for url in urls:
+		try:
+			response = requests.get(url, timeout=10).text.strip('\r\n ')			
+			if verbose:
+				print('[pyduc.get_public_ip] Response: "{}"'.format(response))
+				
+		except (ReadTimeout, ConnectTimeout, HTTPError, Timeout, ConnectionError):
+			print('[pyduc.get_public_ip] failed to connect to {}. Trying another service...'.format(url))
+			pass
+			
+		return response
+	raise Timeout()
 	
 class Pyduc:
 	def __init__(self, username, hostnames, pw_path='./pw', poll_sleep_duration='30 seconds'):

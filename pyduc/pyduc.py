@@ -65,11 +65,11 @@ def get_public_ip():
 			if verbose:
 				print('[pyduc.get_public_ip] Response: "{}"'.format(response))
 				
+			return response
+				
 		except (ReadTimeout, ConnectTimeout, HTTPError, Timeout, ConnectionError):
 			print('[pyduc.get_public_ip] failed to connect to {}. Trying another service...'.format(url))
-			pass
 			
-		return response
 	raise Timeout()
 	
 class Pyduc:

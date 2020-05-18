@@ -58,6 +58,7 @@ def error_code(response):
 	
 def get_public_ip():
 	urls = ['https://icanhazip.com', 'https://api.ipify.org', 'http://icanhazip.com', 'http://api.ipify.org']
+	response = None
 	
 	for url in urls:
 		try:
@@ -66,9 +67,9 @@ def get_public_ip():
 				print('[pyduc.get_public_ip] Response: "{}"'.format(response))
 				
 			return response
-				
 		except (ReadTimeout, ConnectTimeout, HTTPError, Timeout, ConnectionError):
 			print('[pyduc.get_public_ip] failed to connect to {}. Trying another service...'.format(url))
+			pass
 			
 	raise Timeout()
 	
@@ -136,7 +137,7 @@ class Pyduc:
 			# Send HTTP get to noip update host
 			try:
 				response = self.__send_noip_request(ip = new_ip, hostname = hostname)
-			except e:
+			except Exception as e:
 				print('Error with noip request. Check Pyduc.error_log() for more info')
 				self.__error_log.append(e)
 				self.__needs_update = False
@@ -186,10 +187,9 @@ class Pyduc:
 		))
 			
 	def __load_password(self):
-		file = open(self.pw_path, 'r')
-		password = file.read()
-		file.close()
-		return password
+		with open(self.pw_path, 'r') as file:
+			password = file.read()
+			return password
 		
 	def __make_http_headers(self):
 		return {

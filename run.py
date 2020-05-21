@@ -10,5 +10,9 @@ pyduc = Pyduc(
 	poll_sleep_duration = args.poll_sleep,
 )
 
-print(pyduc)
-pyduc.start()
+while True:
+	try:
+		print(pyduc)
+		pyduc.start()
+except Exception as e:
+	print(e)

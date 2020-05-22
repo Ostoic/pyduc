@@ -14,5 +14,5 @@ while True:
 	try:
 		print(pyduc)
 		pyduc.start()
-except Exception as e:
-	print(e)
+	except Exception as e:
+		print(e)

@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyduc"
+version = "0.1.1"
+authors = [
+    { name = "Shaun Ostoic", email = "ostoic@proton.me" },
+]
+
+description = "A Python No-IP Dynamic Update Client"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["requests", "stuom @ git+ssh://git@github.com/Ostoic/stuom"]
+
+[project.optional-dependencies]
+dev = ["black", "ruff"]
+cli = ["click"]
+
+[project.scripts]
+pyduc = "pyduc:cli"
+
+[tool.pylint]
+max-line-length = 100
+disable = "too-many-arguments"
+good-names = ['s', 'db', 'n', 'i']
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["I", "E", "F", "B", "W"]
+
+ignore = [
+    "F821",
+    "F401",
+    "F841",
+    # "B018",
+] # Remove ruff disable lint option from quick actions. Also disable removing unused imports since __init__.py in library packages follow this pattern.
+
+[tool.black]
+experimental-string-processing = true
